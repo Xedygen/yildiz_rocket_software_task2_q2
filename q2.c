@@ -45,6 +45,10 @@ int main() {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             scanf("%d", &matrix[i][j]);
+            if (matrix[i][j] < 0 || matrix[i][j] > 255) {
+                printf("Gray pixel value can not be negative or bigger than 255. Try again.\n");
+                j--;
+            }
         }
     }
 
